@@ -1,18 +1,33 @@
-import React from 'react'
+import Image from 'next/image';
+import Link from 'next/link'
+import companylogo from '../../../public/weblogoheader.webp'
+import ButtonTyp1 from '../theme/ButtonTyp1';
+import Container from './Container';
 
 export default function Navbar() {
     return (
-        <nav className="border-b">
-            <div className="mx-auto max-w-7xl px-4 py-4 flex items-center justify-between">
-                <h2 className="font-bold">Logo</h2>
+        <header className="border-b">
+            <Container>
+                <nav >
+                    <div className="mx-auto max-w-7xl py-5 flex items-center justify-between">
+                        <Link className='' href='/'>
+                            <Image className='h-10 w-auto' src={companylogo} alt="Logo" loading="eager" />
+                        </Link>
 
-                <div className="flex gap-6">
-                    <a href="/">Home</a>
-                    <a href="/about">About</a>
-                    <a href="/blogs">Blogs</a>
-                    <a href="/contact">Contact</a>
-                </div>
-            </div>
-        </nav>
+                        <div className="flex gap-6">
+                            <Link href="/solutions">Solutions</Link>
+                            <Link href="/about">About</Link>
+                            <Link href="/blogs">Blogs</Link>
+                        </div>
+
+                        <div className="">
+                            <ButtonTyp1 text='Contact Us' link='/contact' />
+                        </div>
+                    </div>
+                </nav>
+
+            </Container>
+
+        </header>
     );
 }
