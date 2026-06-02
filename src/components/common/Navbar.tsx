@@ -1,8 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link'
 import companylogo from '../../../public/weblogoheader.webp'
-import ButtonTyp1 from '../theme/ButtonTyp1';
-import Container from './Container';
+import { ButtonTyp1, Container } from '@/components';
 
 export default function Navbar() {
     return (
@@ -21,7 +20,7 @@ export default function Navbar() {
                         </div>
 
                         <div className="">
-                            <ButtonTyp1 text='Contact Us' link='/contact' />
+                            <ButtonTyp1 txt='Contact Us' url='/contact' />
                         </div>
                     </div>
                 </nav>

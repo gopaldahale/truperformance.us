@@ -1,8 +1,24 @@
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { ButtonEntry } from '@/types/ui/button'
 
-export default function ButtonTyp1({ text = "Click Me", link = "/", target = "_self" }) {
+type Props = {
+    button?: ButtonEntry;
+    txt?: string;
+    url?: string;
+    target?: string
+};
+
+export default function ButtonTyp1({ button, txt, url, target }: Props) {
+    
+    const bTxt = txt || button?.fields?.buttonText || 'Click Me';
+    const bUrl = url || button?.fields?.buttonLink || '#';
+    const bTarget = target || button?.fields?.target || '_self';
+
+
+    console.log('Heade', bTxt, bUrl)
+
     const btnClass = `relative
         inline-flex
         justify-center
@@ -37,11 +53,15 @@ export default function ButtonTyp1({ text = "Click Me", link = "/", target = "_s
                 hover:before:w-full`;
     const finalClassBtn = `${btnClass + pseudoBefore}`.replace(/\s+/g, ' ').trim()
 
+
     return (
         <>
-            <Link className={finalClassBtn} href={link} target={target}>
-                <span>{text}</span>
-                <FontAwesomeIcon className='text-[14px]' icon={faArrowRight} />
+            <Link className={finalClassBtn}
+                href={bUrl}
+                target={bTarget}
+            >
+                <span>{bTxt}</span>
+                <FontAwesomeIcon className='text-[0.875rem]' icon={faArrowRight} />
             </Link>
         </>
     )
