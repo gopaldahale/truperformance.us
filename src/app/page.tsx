@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import { HeroSectionTyp1, GridCardSection1 } from "@/components";
 import { getPage } from "@/services/page.service"
 import { PageEntry } from "@/types/page";
