@@ -1,0 +1,13 @@
+.gridSec {
+  background-image: var(--desktop-bg);
+}
+
+@media (max-width: 1024px) {
+  .gridSec {
+  }
+}
+
+@media (max-width: 768px) {
+  .gridSec {
+  }
+}

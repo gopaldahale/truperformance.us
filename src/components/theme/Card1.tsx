@@ -10,20 +10,21 @@ type Props = {
 }
 
 export default function Card1({ data }: Props) {
-    const { content, link, logo, title} = data.fields
-    const desc = richTextToPlainText(content) 
+    const { content, link, logo, title } = data.fields
+    const desc = richTextToPlainText(content);
+    // console.log('src', logo)
+    const src = getAssetUrl(logo) ?? '';
     return (
         <>
             <div className="">
-                {link && <a className=""
-                    href={link}
-                    target=""></a>}
+                {link && <a className="" href={link} target=""></a>}
                 <div className="">
-                    {/* <Image
+                    <Image
                         height={80}
                         width={80}
                         className={`${styles.card1}`}
-                        src={getAssetUrl(logo) || ''} alt="" /> */}
+                        style={{ 'height': `80px`, 'width': `80px` }}
+                        src={src} alt="" unoptimized />
                 </div>
                 <h3>{title}</h3>
                 <p>{desc}</p>
@@ -31,4 +32,3 @@ export default function Card1({ data }: Props) {
         </>
     )
 }
-  
