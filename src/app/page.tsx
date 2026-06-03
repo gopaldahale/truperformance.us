@@ -5,7 +5,7 @@ import { HeroSectionEntry } from "@/types/sections/hero";
 import { SectionEntry } from "@/types/sections/section";
 
 export default async function Home() {
-  const page = await getPage('homepage') as PageEntry;
+  const page = await getPage('homepage');
   // const pgdata = JSON.stringify(page, null, 2)
   console.log('data', page)
   const heroSection = page.fields.flexibleContent?.[0] as HeroSectionEntry
