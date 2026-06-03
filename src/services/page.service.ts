@@ -1,8 +1,6 @@
 // src/services/page.service.ts
 
 import { client } from "@/lib/contentful";
-import { ContentfulEntry } from "@/types/contentful";
-
 
 export async function getPage(slug: string) {
   const response = await client.getEntries({
@@ -12,5 +10,5 @@ export async function getPage(slug: string) {
     limit:1
   });
 
-  return response.items[0] as ContentfulEntry<PageFields>;
+  return response.items[0];
 }
