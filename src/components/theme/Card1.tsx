@@ -16,9 +16,9 @@ export default function Card1({ data }: Props) {
     const src = getAssetUrl(logo) ?? '';
     return (
         <>
-            <div className="">
+            <div className={`p-8.75 bg-[#FFFFFF] rounded-[10px] border border-transparent box-border relative transition-all duration-300 overflow-hidden ${styles.card1}`}>
                 {link && <a className="" href={link} target=""></a>}
-                <div className="">
+                <div className="relative size-21 mb-4 z-1">
                     <Image
                         height={80}
                         width={80}
@@ -26,8 +26,8 @@ export default function Card1({ data }: Props) {
                         style={{ 'height': `80px`, 'width': `80px` }}
                         src={src} alt="" unoptimized />
                 </div>
-                <h3>{title}</h3>
-                <p>{desc}</p>
+                <h3 className="text-[#191B1F)] text-[34px] font-medium leading-[1.3] capitalize tracking-[-0.56px] mb-[15px] transition-all duration-300 z-[3] relative">{title}</h3>
+                <p className="text-[#7A7A7A] text-base font-normal leading-normal mb-0 transition-all duration-300">{desc}</p>
             </div>
         </>
     )

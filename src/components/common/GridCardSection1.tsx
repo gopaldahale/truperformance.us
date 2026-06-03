@@ -24,10 +24,10 @@ export default function GridCardSection1({ section }: Props) {
             <Container>
                 <div className="row">
                     <div className="contentBox">
-                        <H2>{title}</H2>
-                        <Para>{content}</Para>
+                        <H2 className='text-center'>{title}</H2>
+                        <Para className='text-center mb-12'>{content}</Para>
                     </div>
-                    <div className="grid">
+                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
                         {flexibleContent?.map((item: any, index: number) => (
                             <Card1 key={index} data={item} />
                         ))}

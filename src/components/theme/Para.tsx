@@ -1,9 +1,10 @@
 import React from 'react'
 interface paraProps {
     children: React.ReactNode; // ReactNode allows strings, numbers, or other elements
+    className?: string
 }
 
-export default function Para({ children }: paraProps) {
+export default function Para({ children, className }: paraProps) {
     const paragraphStyle = `
   w-full   
   text-[1.125rem] 
@@ -11,6 +12,7 @@ export default function Para({ children }: paraProps) {
   tracking-normal 
   text-[var(--secondary-txt-color)] 
   mb-[2.25rem]
+  ${className}
 `.replace(/\s+/g, ' ').trim();
     return (
         <p className={paragraphStyle}>

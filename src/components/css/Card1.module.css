@@ -2,3 +2,6 @@
     height: var(--height);
     width: var(--width);
 }
+.card1:hover{
+    background: var(--hover-gradient-border);
+}
