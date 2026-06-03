@@ -5,7 +5,7 @@ export interface PageFields {
   title: string;
   slug: string;
 
-  flexibleContent?: HeroSectionEntry[];
+  flexibleContent?: any[];
 }
 
 export type PageEntry = ContentfulEntry<PageFields>;
