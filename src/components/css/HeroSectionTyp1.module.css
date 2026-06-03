@@ -1,0 +1,14 @@
+.heroSection {
+  background-image: var(--desktop-bg);
+}
+
+@media (max-width: 1024px) {
+  .heroSection {
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    background-image: var(--mobile-bg);
+  }
+}
