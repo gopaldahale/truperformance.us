@@ -2,6 +2,7 @@
 export { default as GridCardSection1 } from './common/GridCardSection1';
 export { default as HeroSectionTyp1 } from './common/HeroSectionTyp1';
 export { default as Container } from './common/Container';
+export { default as BannerSectionTyp1 } from './common/BannerSectionTyp1';
 // Theme 
 export { default as H1 } from './theme/H1';
 export { default as H2 } from './theme/H2';

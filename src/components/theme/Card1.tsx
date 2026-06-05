@@ -16,7 +16,7 @@ export default function Card1({ data }: Props) {
     const src = getAssetUrl(logo) ?? '';
     return (
         <>
-            <div className={`p-8.75 bg-[#FFFFFF] rounded-[10px] border border-transparent box-border relative transition-all duration-300 overflow-hidden ${styles.card1}`}>
+            <div className={`p-8.75 bg-[#FFFFFF] rounded-[10px] border border-transparent box-border relative transition duration-0 overflow-hidden ${styles.card1}`}>
                 {link && <a className="" href={link} target=""></a>}
                 <div className="relative size-21 mb-4 z-1">
                     <Image
