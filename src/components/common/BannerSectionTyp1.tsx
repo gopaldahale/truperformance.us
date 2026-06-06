@@ -45,7 +45,7 @@ export default function BannerSectionTyp1({ section }: Props) {
             )}
 
             <Container>
-                <div className="row relative z-10">
+                <div className="row relative z-10 flex gap-6 items-center">
                     <div className="contentBox w-3/5">
                         <h2 className="secondaryhead">{title}</h2>
 
@@ -60,7 +60,7 @@ export default function BannerSectionTyp1({ section }: Props) {
                         <img
                             src={mediaImg}
                             alt={image?.fields?.description || title}
-                            className="max-w-full h-auto"
+                            className="max-w-full w-2/5 h-auto mt-8"
                         />
                     )}
                 </div>
